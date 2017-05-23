@@ -1,0 +1,11 @@
+[Unit]
+Description=Poll battery level and update Alienware Logos
+Documentation=www.github.com/ybotspawn
+
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=1min
+Unit=alienware_battery.service
+
+[Install]
+WantedBy=timers.target

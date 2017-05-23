@@ -1,0 +1,9 @@
+[Unit]
+Description='Alienware Battery logo service'
+
+[Service]
+Type=oneshot
+ExecStart=/opt/AlienwareBattery/battery.sh
+
+[Install]
+WantedBy=multi-user.target
