@@ -1,0 +1,13 @@
+[Unit]
+Description='Alienware Battery logo shutdown service'
+RequiresMountsFor=/ /home /var 
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/true
+ExecStop=/opt/AlienwareBattery/shutdown.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
